@@ -1,0 +1,24 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "description": "implementation of websocket server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CunningLearner/websocket.git"
+  },
+  "author": "himanshu sahdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CunningLearner/websocket/issues"
+  },
+  "homepage": "https://github.com/CunningLearner/websocket#readme",
+  "dependencies": {
+    "http": "^0.0.0",
+    "websocket": "^1.0.24"
+  }
+}
