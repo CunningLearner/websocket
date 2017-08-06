@@ -54,14 +54,14 @@ wsServer.on('request', function(request) {
   // accept connection - you should check 'request.origin' to
   // make sure that client is connecting from your website
   // (http://en.wikipedia.org/wiki/Same_origin_policy)
-  var connection = request.accept(null, request.origin); 
+  var connection = request.accept('echo-protocol', request.origin); 
+  connection.send("HTTP/1.1 101 Switching Protocols\r\n");
+  // connection sending
   // we need to know client index to remove them on 'close' event
   var index = clients.push(connection) - 1;
   var userName = false;
   var userColor = false;
   console.log((new Date()) + ' Connection accepted.');
-  connection.send("HTTP/1.1 101 Switching Protocols\r\n");
-  // connection sending
   // send back chat history
   if (history.length > 0) {
     connection.sendUTF(
