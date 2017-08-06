@@ -60,6 +60,8 @@ wsServer.on('request', function(request) {
   var userName = false;
   var userColor = false;
   console.log((new Date()) + ' Connection accepted.');
+  connection.send("HTTP/1.1 101 Switching Protocols\r\n");
+  // connection sending
   // send back chat history
   if (history.length > 0) {
     connection.sendUTF(
