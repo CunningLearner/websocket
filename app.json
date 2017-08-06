@@ -1,0 +1,6 @@
+{
+  "name": "websocket implementation",
+  "description": "websocket server implementation",
+  "repository": "https://github.com/CunningLearner/websocket",
+  "keywords": ["websocket", "socket server"]
+}
