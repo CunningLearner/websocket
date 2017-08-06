@@ -54,8 +54,8 @@ wsServer.on('request', function(request) {
   // accept connection - you should check 'request.origin' to
   // make sure that client is connecting from your website
   // (http://en.wikipedia.org/wiki/Same_origin_policy)
-  var connection = request.accept('echo-protocol', request.origin); 
-  connection.send("HTTP/1.1 101 Switching Protocols\r\n");
+  var connection = request.accept(null , request.origin); 
+//   connection.send("HTTP/1.1 101 Switching Protocols\r\n");
   // connection sending
   // we need to know client index to remove them on 'close' event
   var index = clients.push(connection) - 1;
